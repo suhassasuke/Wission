@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "950390428053",
+    "firebase_url": "https://wission-435c3.firebaseio.com",
+    "project_id": "wission-435c3",
+    "storage_bucket": "wission-435c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950390428053:android:72792a536d6905b7",
+        "android_client_info": {
+          "package_name": "com.example.wission"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950390428053-hk507kn1kt3npf2intde6s9v75mrmh3n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wission",
+            "certificate_hash": "aadedaefcc419b096e44bf162c7a975fa6ed4a6c"
+          }
+        },
+        {
+          "client_id": "950390428053-aon5fa0srl8nieq0sn5l3r4niarpn56a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATQK2e1ZyykV33wNvO2477m-bC6rLfbHI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950390428053-aon5fa0srl8nieq0sn5l3r4niarpn56a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
