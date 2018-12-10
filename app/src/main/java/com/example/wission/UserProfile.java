@@ -87,7 +87,7 @@ public class UserProfile extends AppCompatActivity {
                 try  {
                     //Your code goes here
                     try {
-                        URL url = new URL("https://lh3.googleusercontent.com/a-/AN66SAxxaKAkZw25_Az8JA4exOK-JpTsfFuJ48f68Iis");
+                        URL url = new URL(mProfile.toString());
                         bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
                         profile.setImageBitmap(bitmap);
                     } catch(IOException e) {
