@@ -1,6 +1,6 @@
 # Wission
 
-Wission is a Stand-UP Comedy from YouTube
+Wission is a Stand-UP Comedy Application from YouTube
 
 Features included:
 1. Google SignIn
