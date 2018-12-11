@@ -42,7 +42,7 @@ public class PlayerActivity extends YouTubeBaseActivity implements OnInitialized
         //initialising various descriptive data in the UI and player
         TextView video_title = (TextView) findViewById(R.id.player_title);
         TextView video_desc = (TextView) findViewById(R.id.player_description);
-        TextView video_id = (TextView) findViewById(R.id.player_id);
+        TextView video_views = (TextView) findViewById(R.id.player_views);
 
         //setting text of each View form UI
         //setText method used to change the text shown in the view
@@ -50,7 +50,7 @@ public class PlayerActivity extends YouTubeBaseActivity implements OnInitialized
         //of which getStringExtra returns the string which was passed while calling the intent
         //by using the name that was associated during call
         video_title.setText(getIntent().getStringExtra("VIDEO_TITLE"));
-        video_id.setText("Video ID : " + (getIntent().getStringExtra("VIDEO_ID")));
+        video_views.setText((getIntent().getStringExtra("VIDEO_VIEWS")+" views"));
         video_desc.setText(getIntent().getStringExtra("VIDEO_DESC"));
     }
 

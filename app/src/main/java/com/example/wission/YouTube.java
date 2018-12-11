@@ -1,5 +1,6 @@
 package com.example.wission;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.wission.adapter.YouTubeAdapter;
 import com.example.wission.connector.VideoItem;
@@ -14,7 +17,7 @@ import com.example.wission.connector.YouTubeConnector;
 
 import java.util.List;
 
-public class YouTube extends AppCompatActivity {
+public class YouTube extends Activity {
 
     private static final String TAG = "YouTube";
 
@@ -24,12 +27,23 @@ public class YouTube extends AppCompatActivity {
     private ProgressDialog mProgressDialog;
     private Handler handler;
 
+    Button signout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube);
 
+
+        signout = (Button) findViewById(R.id.signout);
+        signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LoginActivity.signOut();
+                finish();
+            }
+        });
         //initailising
         mProgressDialog = new ProgressDialog(this);
         mProgressDialog.setTitle("Searching...");

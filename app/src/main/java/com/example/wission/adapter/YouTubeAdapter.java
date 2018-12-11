@@ -35,7 +35,7 @@ public class YouTubeAdapter extends RecyclerView.Adapter<YouTubeAdapter.MyViewHo
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
         public ImageView thumbnail;
-        public TextView videotitle, videoviews ;
+        public TextView videotitle, videoviews, videodescription ;
         public LinearLayout youtubelayout;
 
         public MyViewHolder(View view) {
@@ -47,6 +47,7 @@ public class YouTubeAdapter extends RecyclerView.Adapter<YouTubeAdapter.MyViewHo
             thumbnail = (ImageView) view.findViewById(R.id.videoimage);
             videotitle = (TextView) view.findViewById(R.id.videotitle);
             videoviews = (TextView) view.findViewById(R.id.videoviews);
+            videodescription = (TextView) view.findViewById(R.id.videodescription);
             youtubelayout = (LinearLayout) view.findViewById(R.id.youtubelayout);
         }
     }
@@ -81,6 +82,7 @@ public class YouTubeAdapter extends RecyclerView.Adapter<YouTubeAdapter.MyViewHo
         //replace the default text with id, title and description with setText method
         holder.videotitle.setText(singleVideo.getTitle());
         holder.videoviews.setText(singleVideo.getViews());
+        holder.videodescription.setText(singleVideo.getDescription());
 
         //Picasso library allows for hassle-free image loading
         // in your application—often in one line of code!
@@ -119,6 +121,7 @@ public class YouTubeAdapter extends RecyclerView.Adapter<YouTubeAdapter.MyViewHo
                 //arguments is a name used to identify the data and other is the data itself
                 intent.putExtra("VIDEO_ID", singleVideo.getId());
                 intent.putExtra("VIDEO_TITLE",singleVideo.getTitle());
+                intent.putExtra("VIDEO_VIEWS",singleVideo.getViews());
                 intent.putExtra("VIDEO_DESC",singleVideo.getDescription());
 
                 //Flags define hot the activity should behave when launched

@@ -29,8 +29,7 @@ public class UserProfile extends AppCompatActivity {
 
     TextView id, name, familyname, email, givenname;
     ImageView profile;
-    Button signout;
-    FloatingActionButton youtubebutton;
+    Button youtubebutton;
     Uri mProfile;
     String mId, mName, mFamilyName, mEmail, mGivenName;
     Bitmap bitmap=null;
@@ -55,8 +54,7 @@ public class UserProfile extends AppCompatActivity {
         profile = (ImageView) findViewById(R.id.profile);
         email = (TextView) findViewById(R.id.email);
         givenname = (TextView) findViewById(R.id.givenname);
-        signout = (Button) findViewById(R.id.signout);
-        youtubebutton = (FloatingActionButton) findViewById(R.id.youtubebutton);
+        youtubebutton = (Button) findViewById(R.id.youtubebutton);
 
         id.setText(mId);
         name.setText(mName);
@@ -64,19 +62,14 @@ public class UserProfile extends AppCompatActivity {
         email.setText(mEmail);
         givenname.setText(mGivenName);
 
-        signout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                LoginActivity.signOut();
-                finish();
-            }
-        });
+
 
         youtubebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), YouTube.class);
                 startActivity(intent);
+                finish();
             }
         });
 

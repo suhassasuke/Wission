@@ -6,15 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".UserProfile">
 
-    <Button
-        android:id="@+id/signout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:textColor="#ffff"
-        android:text="SignOut"
-        app:backgroundTint="@color/colorPrimaryDark" />
-
     <ImageView
         android:id="@+id/header_cover_image"
         android:layout_width="match_parent"
@@ -167,15 +158,20 @@
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 
-    <android.support.design.widget.FloatingActionButton
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+
+    <Button
         android:id="@+id/youtubebutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="29dp"
-        android:src="@mipmap/youtube"
-        app:backgroundTint="@color/colorPrimaryDark" />
-
+        android:text="YouTube"
+        android:drawableLeft="@mipmap/youtube"
+        android:background="@drawable/layout_youtube" />
+    </LinearLayout>
 </RelativeLayout>
